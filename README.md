@@ -1,1 +1,1 @@
-# Musiq_Player_Project
+# Music_Player_Project
