@@ -18,6 +18,7 @@ private:
 public:
     list();
     list(std::vector<T> vec);
+    list(std::initializer_list<T> values);
     void display();
     Node<T> *begin();
     Node <T> *end();

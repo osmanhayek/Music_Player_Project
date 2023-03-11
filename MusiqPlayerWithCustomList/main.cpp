@@ -58,7 +58,7 @@ void add_Song(list<Song> *list,int index){
 }
 //display_current(),first_song(),pre_song(),addSong(),drive_menu()
 int main(){
-    vector<Song> vec
+    list<Song> lis
     {
         Song{"God's Plan","Drake",5},
         Song{"Never Be The Same","Camila Cabello",5},
@@ -67,7 +67,7 @@ int main(){
         Song{"Wait","Maroone 5",4},
         Song{"Whatever It Takes","Imagine Dragons",3}
     };
-    list<Song> lis{vec};
+    
     auto current_song=lis.begin();
     cout<<"Welcome to my project\n===================================\n";
     lis.display();

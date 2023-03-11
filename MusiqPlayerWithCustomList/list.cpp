@@ -22,6 +22,21 @@ list<T>::list(std::vector<T> vec){
     }
 }
 template<typename T>
+list<T>::list(std::initializer_list<T> values){
+    this->first=new Node(*values.begin());
+    this->first->next=this->first;
+    this->first->pre=this->first;
+    Node<T> *last=first;
+    for(auto it=values.begin()+1;it!=values.end();it++){
+        Node<T> *q=new Node(*it);
+        q->next=first;
+        q->pre=last;
+        last->next=q;
+        first->pre=q;
+        last=q;
+    }
+}
+template<typename T>
 list<T>::~list(){
     Node<T> *p=first;
     int n=this->size();
